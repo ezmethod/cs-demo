@@ -35,7 +35,7 @@ flow:
             - FAILURE: start_service    #try to start the service even when stopping it failed (might have been stopped already)
       - start_service:
           do:
-            io.cloudslang.base.cmd.run_command:
+            io.cloudslang.demo.sub_flows.run_command:
               - command: ${'net start '+service_name}
           publish:
               - return_result
