@@ -13,7 +13,7 @@
 #!!#
 ########################################################################################################################
 
-namespace: content.io.cloudslang.demo
+namespace: io.cloudslang.demo
 
 flow:
     name: restart_local_service
@@ -24,7 +24,7 @@ flow:
     workflow:
       - stop_service:
           do:
-            io.cloudslang.base.cmd.run_command:
+            io.cloudslang.demo.sub_flows.run_command:
               - command: ${'net stop '+service_name}
           publish:
               - return_result
