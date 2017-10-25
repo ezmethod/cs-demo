@@ -32,6 +32,8 @@ flow:
               - availability_zone: 'us-east-1c'  # N.Virginia
 #              - availability_zone: 'us-east-2b'   # Ohio
 #              - endpoint: 'https://ec2.us-east-2.amazonaws.com'
+              - key_tags_string: 'demo'
+              - value_tags_string: 'cloudslang'
           publish:
             - instance_id
             - ip_address
