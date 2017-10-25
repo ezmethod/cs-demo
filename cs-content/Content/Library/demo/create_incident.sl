@@ -11,7 +11,7 @@
 #!!#
 ########################################################################################################################
 
-namespace: content.io.cloudslang.demo
+namespace: io.cloudslang.demo
 
 flow:
     name: create_incident
@@ -25,7 +25,7 @@ flow:
     workflow:
       - create_incident:
           do:
-            io.cloudslang.itsm.service_now.commons.create_record:
+            io.cloudslang.demo.sub_flows.create_record:
               - host
               - username
               - password
