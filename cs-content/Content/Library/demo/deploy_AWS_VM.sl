@@ -7,7 +7,7 @@
 #!!#
 ########################################################################################################################
 
-namespace: content.io.cloudslang.demo
+namespace: io.cloudslang.demo
 imports:
   ec2: io.cloudslang.amazon.aws.ec2
 
@@ -24,7 +24,7 @@ flow:
     workflow:
       - deploy_instance:
           do:
-            ec2.instances.run_instances:
+            ec2.deploy_instance:
               - identity
               - credential
               - image_id
