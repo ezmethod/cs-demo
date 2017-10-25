@@ -17,16 +17,19 @@ flow:
     name: create_incident
 
     inputs:
+      - host: 'dev30231.service-now.com'
+      - username: 'admin'
+      - password: 'g0.HP.software'
       - description: "Need to reset password"
 
     workflow:
       - create_incident:
           do:
             io.cloudslang.itsm.service_now.commons.create_record:
-              - host: 'dev30231.service-now.com'
+              - host
+              - username
+              - password
               - table_name: 'incident'
-              - username: 'admin'
-              - password: 'g0.HP.software'
               - body: ${"{'short_description':'"+description+"','impact':'1','urgency':'1'}"}
           publish:
             - json_output: '${return_result}'
