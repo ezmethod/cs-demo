@@ -20,6 +20,7 @@ flow:
       - image_id: 'ami-8c1be5f6'  # amazon linux us-east-1c
 #      - image_id: 'ami-c5062ba0'  # amazon linux us-east-2b
       - instance_type: 't2.micro'
+      - value_tags_string: 'type_your_name_oo_demo_presenter'
 
     workflow:
       - deploy_instance:
@@ -32,8 +33,8 @@ flow:
               - availability_zone: 'us-east-1c'  # N.Virginia
 #              - availability_zone: 'us-east-2b'   # Ohio
 #              - endpoint: 'https://ec2.us-east-2.amazonaws.com'
-              - key_tags_string: 'demo'
-              - value_tags_string: 'cloudslang'
+              - key_tags_string: 'owner'
+              - value_tags_string
           publish:
             - instance_id
             - ip_address
